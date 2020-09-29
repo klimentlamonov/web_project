@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Главная
+{% endblock %}
+
+
+{% block content %}
+	{% for el in comments %}
+	<div class="col-lg-4">
+        <h2>{{ el.login }}</h2>
+        <p>{{ el.text }}</p>
+      </div>
+	{% endfor %}
+	
+{% endblock %}
